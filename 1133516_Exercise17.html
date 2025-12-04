@@ -37,26 +37,23 @@
             .bottom{
                 background-color:#dcdcdc;
             }
-            .row-mid, .row-bottom{
-                display: flex;
+            .row-mid{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
                 gap: 10px;
             }
-            .row-mid .box, .row-bottom .box{
-                flex: 1;
+            .row-bottom{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
             }
             /* 排版設定 */
             @media screen and (max-width: 720px){
                 .row-mid{
-                    display: block;
-                }
-                .row-mid .box{
-                    width: 100%;
-                    margin-bottom: 10px;
+                    grid-template-columns: 1fr;
                 }
                 .row-bottom{
-                    display: grid;
                     grid-template-columns: repeat(2, 1fr);
-                    gap: 10px;
                 }
             }
         </style>
