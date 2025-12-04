@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                background-color: #87CEEB;
+                padding: 30px 0;
+            }
+            .container{
+                width: 90%;
+                max-width: 900px;
+                margin: auto;
+                background: white;
+                border-radius: 15px;
+            }
+            .section{
+                background: white;
+                padding: 15px;
+                border-radius: 15px;
+                margin-bottom: 20px;
+            }
+            .box{
+                padding: 20px;
+                border-radius: 5px;
+                font-size: 20px;
+            }
+            /* 顏色設定 */
+            .top{
+                background-color: #b6d96c;
+                height: 130px;
+            }
+            .mid{
+                background-color: #0099ff;
+                color: white;
+            }
+            .bottom{
+                background-color:#dcdcdc;
+            }
+            .row-mid, .row-bottom{
+                display: flex;
+                gap: 10px;
+            }
+            .row-mid .box, .row-bottom .box{
+                flex: 1;
+            }
+            /* 排版設定 */
+            @media screen and (max-width: 720px){
+                .row-mid{
+                    display: block;
+                }
+                .row-mid .box{
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                .row-bottom{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 10px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!--上面第一格-->
+            <div class="section">
+                <div class="box top" style="background-color:green;">
+                    <h2>Column 1</h2>
+                    <p>This is column 1.</p>
+                </div>
+            </div>
+            <!--中間三格-->
+            <div class="section">
+                <div class="row-mid">
+                    <div class="box mid">
+                        <h2>Column 2</h2>
+                        <p>This is column 2.</p>
+                    </div>
+                    <div class="box mid">
+                        <h2>Column 3</h2>
+                        <p>This is column 3.</p>
+                    </div>
+                    <div class="box mid">
+                        <h2>Column 4</h2>
+                        <p>This is column 4.</p>
+                    </div>
+                </div>
+            </div>
+            <!--底下四格-->
+            <div class="section">
+                <div class="row-bottom">
+                    <div class="box bottom">
+                        <h2>Column 5</h2>
+                        <p>This is column 5.</p>
+                    </div>
+                    <div class="box bottom">
+                        <h2>Column 6</h2>
+                        <p>This is column 6.</p>
+                    </div>
+                    <div class="box bottom">
+                        <h2>Column 7</h2>
+                        <p>This is column 7.</p>
+                    </div>
+                    <div class="box bottom">
+                        <h2>Column 8</h2>
+                        <p>This is column 8.</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </body>
+</html>
